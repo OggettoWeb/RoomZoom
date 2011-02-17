@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+
+/**
+ * updates default layout to add zoomimage
+ *
+ *
+ * @category   Oggetto
+ * @package    Oggetto_ZoomImage
+ * @subpackage Frontend
+ * @since      Class available since module release 2.0
+ * @author     roomine
+ */
+-->
+<layout version="0.1.0">
+
+<!--
+Default layout, loads most of the pages
+-->
+    <default>
+        <reference name="head">
+         <action method="addJs"><script>magiczoomplus.js</script></action>
+         <action method="addCss"><stylesheet>css/magiczoomplus.css</stylesheet></action>
+        </reference>
+    </default>
+
+<!--
+Product view
+-->
+    <catalog_product_view translate="label">
+        <label>Catalog Product View (Any)</label>
+        <reference name="head">
+         <action method="addJs"><script>magiczoomplus.js</script></action>
+         <action method="addCss"><stylesheet>css/magiczoomplus.css</stylesheet></action>
+        </reference>
+        <reference name="product.info.media">
+            <action method="setTemplate">
+                <template>zoomimage/product/view/media.phtml</template>
+            </action>
+        </reference>
+    </catalog_product_view>
+
+      <quicklook_product_view translate="label">
+        <label>Catalog Product View (Any)</label>
+        <reference name="head">
+          <action method="addJs"><script>magiczoomplus.js</script></action>
+                <action method="addCss"><stylesheet>css/magiczoomplus.css</stylesheet></action>
+        </reference>
+        <reference name="product.info.media">
+            <action method="setTemplate">
+                <template>zoomimage/product/view/qlmedia.phtml</template>
+            </action>
+        </reference>
+    </quicklook_product_view>
+
+</layout>

@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Oggetto_ZoomImage>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Oggetto_ZoomImage>
+    </modules>
+</config>
