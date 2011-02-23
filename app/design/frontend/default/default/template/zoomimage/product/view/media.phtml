@@ -44,7 +44,7 @@
     </a>
 </p>
 <?php $firstthumbnail = '<li><a href="' . $this->helper('catalog/image')->init($_product, 'image') .'" rel="zoom-id:Zoomer" rev="' . $this->helper('catalog/image')->init($_product, 'image')->constrainOnly(1)->resize(265) . '" title="' . $this->htmlEscape($this->getLabel()) . '"><img src="'. $this->helper('catalog/image')->init($_product, 'image')->resize(56).'" width="56" height="56"/></a></li>'; ?>
-<div id="Hover" style="width:160px;float:left;">Roll ON to ZOOM IN</div><div id="Unhover" style="display:none; width:160px; float:left;">Roll OFF to zoom OUT</div><a href="#" class="ExpandBig" onclick="MagicThumb.expand(document.getElementById('Zoomer'));return false;">View lager</a>
+<div id="Hover" style="width:160px;float:left;"><?php echo $this->__('Roll ON to ZOOM IN'); ?></div><div id="Unhover" style="display:none; width:160px; float:left;"><?php echo $this->__('Roll OFF to zoom OUT'); ?></div><a href="#" class="ExpandBig" onclick="MagicThumb.expand(document.getElementById('Zoomer'));return false;"><?php echo $this->__('View lager'); ?></a>
 <?php else: ?>
 <p class="product-image">
     <?php
