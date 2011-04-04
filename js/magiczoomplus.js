@@ -24,12 +24,14 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 
 Event.observe(window, 'load', function() {
-Event.observe($("Zoomer"), 'mouseover', function() {
-$("Hover").style.display = "none";
-$("Unhover").style.display = "block";
-});
-Event.observe($("Zoomer"), 'mouseout', function() {
-$("Unhover").style.display = "none";
-$("Hover").style.display = "block";
-});
+    if($("Zoomer") != null){
+        Event.observe($("Zoomer"), 'mouseover', function() {
+            $("Hover").style.display = "none";
+            $("Unhover").style.display = "block";
+        });
+        Event.observe($("Zoomer"), 'mouseout', function() {
+            $("Unhover").style.display = "none";
+            $("Hover").style.display = "block";
+        });
+    }
 });
