@@ -32,10 +32,10 @@ Product view
         <label>Catalog Product View (Any)</label>
         <reference name="head">
             <action method="addJs">
-                <script>magiczoomplus.js</script>
+                <script>oggettozoom.js</script>
             </action>
             <action method="addCss">
-                <stylesheet>css/magiczoomplus.css</stylesheet>
+                <stylesheet>css/oggettozoom.css</stylesheet>
             </action>
         </reference>
     </catalog_product_view>
@@ -44,10 +44,10 @@ Product view
         <label>Catalog Product View (Any)</label>
         <reference name="head">
             <action method="addJs">
-                <script>magiczoomplus.js</script>
+                <script>oggettozoom.js</script>
             </action>
             <action method="addCss">
-                <stylesheet>css/magiczoomplus.css</stylesheet>
+                <stylesheet>css/oggettozoom.css</stylesheet>
             </action>
         </reference>
     </quicklook_product_view>
