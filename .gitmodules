@@ -1,0 +1,3 @@
+[submodule "roomzoom"]
+	path = roomzomm
+	url = git://github.com/roomine/RoomZoom.js.git
