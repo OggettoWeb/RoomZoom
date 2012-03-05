@@ -1,8 +1,5 @@
-# Oggetto_ZoomImage module definition
-app/etc/modules/Oggetto_ZoomImage.xml			app/etc/modules/Oggetto_ZoomImage.xml
-app/code/local/Oggetto/ZoomImage			app/code/local/Oggetto/ZoomImage
+# Oggetto_RoomZoom module definition
+app/etc/modules/Oggetto_RoomZoom.xml			app/etc/modules/Oggetto_RoomZoom.xml
+app/code/local/Oggetto/RoomZoom			        app/code/local/Oggetto/RoomZoom
 app/design/frontend/default/default			app/design/frontend/default/default
-js/oggettozoom.js					js/oggettozoom.js
-skin/frontend/default/default/css/graphics		skin/frontend/default/default/css/graphics
-skin/frontend/default/default/css/oggettozoom.css	skin/frontend/default/default/css/oggettozoom.css	
 

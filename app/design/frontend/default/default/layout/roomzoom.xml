@@ -13,13 +13,13 @@
  * DISCLAIMER
  *
  * Do not edit or add to this file if you wish to upgrade
- * the Oggetto ZoomImage module to newer versions in the future.
- * If you wish to customize the Oggetto ZoomImage module for your needs
+ * the Oggetto RoomZoom module to newer versions in the future.
+ * If you wish to customize the Oggetto RoomZoom module for your needs
  * please refer to http://www.magentocommerce.com for more information.
  *
  * @category   Oggetto
- * @package    Oggetto_ZoomImage
- * @copyright  Copyright (C) 2011 Oggetto Web ltd (http://oggettoweb.com/)
+ * @package    Oggetto_RoomZoom
+ * @copyright  Copyright (C) 2012 Oggetto Web ltd (http://oggettoweb.com/)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 -->
@@ -32,10 +32,10 @@ Product view
         <label>Catalog Product View (Any)</label>
         <reference name="head">
             <action method="addJs">
-                <script>oggettozoom.js</script>
+                <script>roomzoom.js</script>
             </action>
             <action method="addCss">
-                <stylesheet>css/oggettozoom.css</stylesheet>
+                <stylesheet>css/roomzoom.css</stylesheet>
             </action>
         </reference>
     </catalog_product_view>
@@ -44,10 +44,10 @@ Product view
         <label>Catalog Product View (Any)</label>
         <reference name="head">
             <action method="addJs">
-                <script>oggettozoom.js</script>
+                <script>roomzoom.js</script>
             </action>
             <action method="addCss">
-                <stylesheet>css/oggettozoom.css</stylesheet>
+                <stylesheet>css/roomzoom.css</stylesheet>
             </action>
         </reference>
     </quicklook_product_view>

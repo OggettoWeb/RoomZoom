@@ -13,46 +13,46 @@
  * DISCLAIMER
  *
  * Do not edit or add to this file if you wish to upgrade
- * the Oggetto ZoomImage module to newer versions in the future.
- * If you wish to customize the Oggetto ZoomImage module for your needs
+ * the Oggetto RoomZoom module to newer versions in the future.
+ * If you wish to customize the Oggetto RoomZoom module for your needs
  * please refer to http://www.magentocommerce.com for more information.
  *
  * @category   Oggetto
- * @package    Oggetto_ZoomImage
+ * @package    Oggetto_RoomZoom
  * @copyright  Copyright (C) 2011 Oggetto Web ltd (http://oggettoweb.com/)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 -->
 <config>
     <modules>
-        <Oggetto_ZoomImage>
+        <Oggetto_RoomZoom>
             <version>0.1.0</version>
-        </Oggetto_ZoomImage>
+        </Oggetto_RoomZoom>
     </modules>
     <frontend>
         <routers>
-            <zoomimage>
+            <RoomZoom>
                 <use>standard</use>
                 <args>
-                    <module>Oggetto_ZoomImage</module>
+                    <module>Oggetto_RoomZoom</module>
                     <frontName>index</frontName>
                 </args>
-            </zoomimage>
+            </RoomZoom>
         </routers>
         <layout>
             <updates>
-                <zoomimage>
-                    <file>zoomimage.xml</file>
-                </zoomimage>
+                <RoomZoom>
+                    <file>roomzoom.xml</file>
+                </RoomZoom>
             </updates>
         </layout>
           <translate>
             <modules>
-                <Oggetto_ZoomImage>
+                <Oggetto_RoomZoom>
                     <files>
-                        <default>Oggetto_ZoomImage.csv</default>
+                        <default>Oggetto_RoomZoom.csv</default>
                     </files>
-                </Oggetto_ZoomImage>
+                </Oggetto_RoomZoom>
             </modules>
         </translate>
     </frontend>
@@ -61,7 +61,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <zoomimage before="Mage_Adminhtml">Oggetto_ZoomImage_Adminhtml</zoomimage>
+                        <RoomZoom before="Mage_Adminhtml">Oggetto_RoomZoom_Adminhtml</RoomZoom>
                     </modules>
                 </args>
             </adminhtml>
@@ -69,14 +69,14 @@
     </admin>
     <global>
         <blocks>
-            <zoomimage>
-                <class>Oggetto_ZoomImage_Block</class>
-            </zoomimage>
+            <RoomZoom>
+                <class>Oggetto_RoomZoom_Block</class>
+            </RoomZoom>
         </blocks>
         <helpers>
-            <zoomimage>
-                <class>Oggetto_ZoomImage_Helper</class>
-            </zoomimage>
+            <RoomZoom>
+                <class>Oggetto_RoomZoom_Helper</class>
+            </RoomZoom>
         </helpers>
     </global>
 </config>

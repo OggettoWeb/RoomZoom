@@ -1,4 +1,5 @@
-<!--
+<?php
+
 /**
  * Oggetto image zoom extension for Magento
  *
@@ -12,21 +13,24 @@
  * DISCLAIMER
  *
  * Do not edit or add to this file if you wish to upgrade
- * the Oggetto ZoomImage module to newer versions in the future.
- * If you wish to customize the Oggetto ZoomImage module for your needs
+ * the Oggetto RoomZoom module to newer versions in the future.
+ * If you wish to customize the Oggetto RoomZoom module for your needs
  * please refer to http://www.magentocommerce.com for more information.
  *
  * @category   Oggetto
- * @package    Oggetto_ZoomImage
- * @copyright  Copyright (C) 2011 Oggetto Web ltd (http://oggettoweb.com/)
+ * @package    Oggetto_RoomZoom
+ * @copyright  Copyright (C) 2012 Oggetto Web ltd (http://oggettoweb.com/)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
- -->
-<config>
-    <modules>
-        <Oggetto_ZoomImage>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Oggetto_ZoomImage>
-    </modules>
-</config>
+/**
+ * Standart Module Helper
+ *
+ * @category   Oggetto
+ * @package    Oggetto_RoomZoom
+ * @subpackage Helper
+ * @author     Denis Obukhov <denis.obukhov@oggettoweb.com>
+ */
+class Oggetto_RoomZoom_Helper_Data extends Mage_Core_Helper_Abstract
+{
+
+}
