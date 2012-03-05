@@ -1,5 +1,5 @@
 =======================================================================
-Oggetto RoomZoom module for absolutely magic product image zoom effect!
+Oggetto RoomZoom Module for Absolutely Magic Product Image Zoom Effect!
 =======================================================================
 
 It replaces default Magento's product image zoom with a new template and a new js.
@@ -11,7 +11,8 @@ https://github.com/roomine/RoomZoom.js
 Compatibility
 -------------
 
-Works on Magento Community edition 1.5 or higher
+Works on Magento Community edition 1.5 or higher.
+
 Enterprise edition not tested.
 
 Examples
