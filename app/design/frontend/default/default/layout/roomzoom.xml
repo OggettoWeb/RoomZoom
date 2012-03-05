@@ -32,7 +32,7 @@ Product view
         <label>Catalog Product View (Any)</label>
         <reference name="head">
             <action method="addJs">
-                <script>roomzoom.js</script>
+                <script>oggetto/roomzoom.js</script>
             </action>
             <action method="addCss">
                 <stylesheet>css/roomzoom.css</stylesheet>
@@ -44,7 +44,7 @@ Product view
         <label>Catalog Product View (Any)</label>
         <reference name="head">
             <action method="addJs">
-                <script>roomzoom.js</script>
+                <script>oggetto/roomzoom.js</script>
             </action>
             <action method="addCss">
                 <stylesheet>css/roomzoom.css</stylesheet>

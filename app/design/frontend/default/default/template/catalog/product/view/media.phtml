@@ -33,19 +33,29 @@
     $_helper = $this->helper('catalog/output');
     $productImageX = 260;
     $productImageY = 260;
-    $productThumbnailX = 38;
-    $productThumbnailY = 45;
+    $productThumbnailX = 56;
+    $productThumbnailY = 56;
 ?>
 <?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
 <p class="product-image ">
-    <a href="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" id="Zoomer" class="MagicZoomPlus" rel="opacity-reverse:true;background-opacity: 30; zoom-fade:true;thumb-change:mouseover;">
+    <a href="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" id="zoomer" rel="gal1">
         <?php
         $_img = '<img id="image" src="'.$this->helper('catalog/image')->init($_product, 'image')->constrainOnly(1)->resize($productImageX, $productImageY).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
     </a>
 </p>
-<div id="Hover" style="width:160px;float:left;"><?php echo $this->__('Roll ON to ZOOM IN'); ?></div><div id="Unhover" style="display:none; width:160px; float:left;"><?php echo $this->__('Roll OFF to zoom OUT') ?></div><a href="#" class="ExpandBig" onclick="MagicThumb.expand(document.getElementById('Zoomer'));return false;"><?php echo $this->__('View lager') ?></a>
+<script>
+    document.observe('dom:loaded', function(){
+                zoom = new RoomZoom($('zoomer'), {
+                    zoomWidth: 330,
+                    zoomHeight:330,
+                    position:'right',
+                    xOffset: 40,
+                    yOffset:0
+                })
+            });
+</script>
 <?php else: ?>
 <p class="product-image">
     <?php
@@ -55,23 +65,25 @@
 </p>
 <?php endif; ?>
 <?php if (count($this->getGalleryImages()) > 0): ?>
-<div class="more-views">
-    <h2><?php echo $this->__('More Views') ?></h2>
-    <ul>
-    <?php foreach ($this->getGalleryImages() as $_image): ?>
-        <li>
-            <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile()); ?>" rel="zoom-id:Zoomer" rev="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->constrainOnly(1)->resize($productImageX, $productImageY); ?>" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>">
-                <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($productThumbnailX,$productThumbnailY); ?>" width="<?php echo $productThumbnailX ?>" height="<?php echo $productThumbnailY ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" />
-            </a>
-        </li>
-    <?php endforeach; ?>
-    </ul>
-</div>
-<?php else: ?>
-           <p class="product-image">
-            <?php
-                $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize($productImageX, $productImageY).'" alt="'.$this->htmlEscape($_product->getImageLabel()).'" title="'.$this->htmlEscape($_product->getImageLabel()).'" />';
-                echo $_helper->productAttribute($_product, $_img, 'image');
-            ?>
-        </p>
+    <div class="more-views">
+        <h2><?php echo $this->__('More Views') ?></h2>
+        <ul>
+            <li>
+                <a href="javascript:void(0);"
+                    class="zoomThumbActive"
+                    rel="{gallery: 'gal1', smallimage: '<?php echo $this->helper('catalog/image')->init($_product, 'image')->constrainOnly(1)->resize($productImageX, $productImageY); ?>', largeimage: '<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>'}">
+                    <img src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail')->resize($productThumbnailX, $productThumbnailY); ?>" width="<?php echo $productThumbnailX ?>" height="<?php echo $productThumbnailY ?>" />
+                </a>
+            </li>
+        <?php foreach ($this->getGalleryImages() as $_image): ?>
+            <li>
+                <a href="javascript:void(0);"
+                   rel="{gallery: 'gal1', smallimage: '<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->constrainOnly(1)->resize($productImageX, $productImageY); ?>', largeimage: '<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile()); ?>'}"
+                   title="<?php echo $this->htmlEscape($_image->getLabel()) ?>">
+                    <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($productThumbnailX,$productThumbnailY); ?>" width="<?php echo $productThumbnailX ?>" height="<?php echo $productThumbnailY ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" />
+                </a>
+            </li>
+        <?php endforeach; ?>
+        </ul>
+    </div>
 <?php endif; ?>
