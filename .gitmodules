@@ -1,3 +1,3 @@
 [submodule "roomzoom"]
 	path = roomzoom
-	url = git://github.com/roomine/RoomZoom.js.git
+	url = git@github.com:roomine/RoomZoom.js.git
