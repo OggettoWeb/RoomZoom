@@ -7,6 +7,7 @@ It replaces default Magento's product image zoom with a new template and a new j
 Don't forget to download and insert into Magento RoomZoom.js Plugin. You can easily download it from
 
 https://github.com/roomine/RoomZoom.js
+Compatable with RoomZoom.js version 1.2.x
 
 Compatibility
 -------------
